@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-19T13:26:29 IST" name="Default suite" finished-at="2026-04-19T13:26:30 IST" duration-ms="935">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-04-19T13:26:29 IST" name="Default test" finished-at="2026-04-19T13:26:30 IST" duration-ms="935">
+      <class name="testRunner.RunnerIO">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T13:26:29 IST" name="setUpClass" finished-at="2026-04-19T13:26:30 IST" duration-ms="437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5cbe877d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T13:26:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-19T13:26:30 IST" duration-ms="284" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add first course to cart without filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Udemy Course Flow"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is on Udemy homepage' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Add to Cart")
+public void user_clicks_on_add_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("course should be added to cart")
+public void course_should_be_added_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is on Udemy homepage' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Add to Cart")
+public void user_clicks_on_add_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("course should be added to cart")
+public void course_should_be_added_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is on Udemy homepage(file:///C:/Users/91934/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/features/searchmanagement.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T13:26:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-19T13:26:30 IST" duration-ms="32" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add course with multiple filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Udemy Course Flow"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is on Udemy homepage' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user applies certification, rating and language filters")
+public void user_applies_certification_rating_and_language_filters() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Add to Cart")
+public void user_clicks_on_add_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("course should be added to cart")
+public void course_should_be_added_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is on Udemy homepage' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user applies certification, rating and language filters")
+public void user_applies_certification_rating_and_language_filters() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Add to Cart")
+public void user_clicks_on_add_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("course should be added to cart")
+public void course_should_be_added_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is on Udemy homepage(file:///C:/Users/91934/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/features/searchmanagement.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T13:26:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-19T13:26:30 IST" duration-ms="13" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enroll in free course"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Udemy Course Flow"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is on Udemy homepage' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user applies free course filter")
+public void user_applies_free_course_filter() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("enroll now button should be visible")
+public void enroll_now_button_should_be_visible() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is on Udemy homepage' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user applies free course filter")
+public void user_applies_free_course_filter() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("enroll now button should be visible")
+public void enroll_now_button_should_be_visible() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is on Udemy homepage(file:///C:/Users/91934/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/features/searchmanagement.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T13:26:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-19T13:26:30 IST" duration-ms="21" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Clear filters and add to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Udemy Course Flow"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is on Udemy homepage' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user applies certification, rating and language filters")
+public void user_applies_certification_rating_and_language_filters() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clears all filters")
+public void user_clears_all_filters() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Add to Cart")
+public void user_clicks_on_add_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("course should be added to cart")
+public void course_should_be_added_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is on Udemy homepage' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user applies certification, rating and language filters")
+public void user_applies_certification_rating_and_language_filters() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clears all filters")
+public void user_clears_all_filters() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Add to Cart")
+public void user_clicks_on_add_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("course should be added to cart")
+public void course_should_be_added_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is on Udemy homepage(file:///C:/Users/91934/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/features/searchmanagement.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T13:26:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-19T13:26:30 IST" duration-ms="16" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search with invalid keyword"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Udemy Course Flow"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user is on Udemy homepage' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("no courses should be displayed")
+public void no_courses_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user is on Udemy homepage' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on Udemy homepage")
+public void user_is_on_udemy_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches for {string}")
+public void user_searches_for(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("no courses should be displayed")
+public void no_courses_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.user is on Udemy homepage(file:///C:/Users/91934/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/features/searchmanagement.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T13:26:30 IST" name="tearDownClass" finished-at="2026-04-19T13:26:30 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.RunnerIO -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
