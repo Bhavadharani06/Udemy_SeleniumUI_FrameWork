@@ -26,6 +26,10 @@ public class InstructorPage {
         return instructorHeader.getText().toLowerCase()
                 .contains(expectedName.split(" ")[0].toLowerCase());
     }
+    
+    public String getInstructorHeader() {
+        return instructorHeader.getText();
+    }
 
     
     public boolean isInstructorVisibleOnCourse(String name) {

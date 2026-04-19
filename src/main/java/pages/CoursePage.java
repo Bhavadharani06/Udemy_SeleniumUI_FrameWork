@@ -22,7 +22,7 @@ public class CoursePage {
     @FindBy(xpath = "//button[contains(.,'Add all to cart')]")
     public WebElement addAllToCartBtn;
 
-    @FindBy(xpath = "//div[contains(@class,'add-to-cart-container')]//button[@aria-label='Go to cart']")
+    @FindBy(xpath = "//button[contains(.,'Go to cart')]")
     public WebElement goToCartBtn;
 
     @FindBy(tagName = "h1")
@@ -47,7 +47,7 @@ public class CoursePage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        // 🔥 IMPORTANT FIX (load hidden section)
+       
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         Thread.sleep(2000);
 
@@ -70,6 +70,7 @@ public class CoursePage {
     }
 
     public void clickInstructor() {
-        instructor.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", instructor);
     }
 }
