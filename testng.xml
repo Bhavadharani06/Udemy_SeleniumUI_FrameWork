@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UdemySuite" parallel="tests" thread-count="2">
+
+    <test name="SearchTests">
+        <classes>
+            <class name="testRunner.RunnerIO"/>
+        </classes>
+    </test>
+
+</suite>

@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -205,6 +206,16 @@ public class AllFunctionality {
 		fis.close();
 
 		return value;
+	}
+	
+	// JAVASCRIPT EXECUTOR
+
+	public void scrollIntoView(WebDriver driver, WebElement element) {
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public void clickJS(WebDriver driver, WebElement element) {
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 	}
 
 	// JAVA UTIL

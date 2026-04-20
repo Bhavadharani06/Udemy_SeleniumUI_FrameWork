@@ -91,5 +91,6 @@
 			<version>7.14.0</version>
 			<scope>compile</scope>
 		</dependency>
-	</dependencies>
+		
+  </dependencies>
 </project>

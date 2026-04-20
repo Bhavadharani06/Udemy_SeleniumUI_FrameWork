@@ -5,7 +5,6 @@ import io.cucumber.java.After;
 
 import java.io.FileInputStream;
 import java.time.Duration;
-import java.util.Collections;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
