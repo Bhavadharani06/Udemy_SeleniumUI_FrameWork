@@ -7,6 +7,10 @@
         <methods>
           <include name="setUpClass"/>
 <<<<<<< HEAD
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0 1 2 3 4"/>
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
           <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="3 4"/>
@@ -18,6 +22,7 @@
           <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="0"/>
 >>>>>>> mylearning
+>>>>>>> a5738de01ff81a0a32affa6081183043405ab42f
         </methods>
       </class> <!-- testRunner.RunnerIO -->
     </classes>

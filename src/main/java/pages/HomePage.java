@@ -20,6 +20,15 @@ public class HomePage extends BasePage {
                 ExpectedConditions.visibilityOfElementLocated(searchBox));
 
         box.clear();
-        box.sendKeys(courseName, Keys.ENTER);
+        box.sendKeys(courseName);
+
+        // small human-like delay (helps with Cloudflare)
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        box.sendKeys(Keys.ENTER);
     }
 }
