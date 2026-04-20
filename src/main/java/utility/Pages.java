@@ -1,8 +1,7 @@
 package utility;
 
-import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
 
 import pages.*;
 
@@ -20,7 +19,6 @@ public class Pages {
     public static ArchivePage archivePage;
     public static LearningToolsPage learningToolsPage;
     public static AllCoursesPage allCoursesPage;
-
 
     public static void initPages(WebDriver driver) {
 
