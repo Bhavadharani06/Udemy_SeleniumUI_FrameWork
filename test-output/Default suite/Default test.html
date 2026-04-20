@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
 <td>Started on:</td><td>Sun Apr 19 20:59:34 IST 2026</td>
 </tr>
 <tr><td>Total time:</td><td>257 seconds (257315 ms)</td>
+=======
+<td>Tests passed/Failed/Skipped:</td><td>0/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Apr 20 07:34:39 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>135 seconds (135544 ms)</td>
+>>>>>>> 981bc544bf32fa1a4f4b817f9c296ee4e01f4313
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,6 +84,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clear filters and add to cart", "Udemy Course Flow"</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //strong[.=&apos;All filters&apos;]&apos; (tried for 40 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
@@ -261,6 +270,139 @@ Session ID: b390a1c78130ddd8b4b23f68f6948869
 <td></td>
 <td>39</td>
 <td>testRunner.RunnerIO@710f4dc7</td></tr>
+=======
+<td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to instructor profile and validate back navigation", "Back navigation retains search results"</td>
+<td><div><pre>java.lang.AssertionError: No courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+	at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/navigation_instructor_back.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1579140143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1579140143'><pre>java.lang.AssertionError: No courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+	at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/navigation_instructor_back.feature:10)
+</pre></div></td>
+<td>30</td>
+<td>testRunner.RunnerIO@77f1baf5</td></tr>
+<tr>
+<td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Open two courses and verify unique URLs", "Course navigation and URL comparison across tabs"</td>
+<td><div><pre>java.lang.AssertionError: Less than 2 courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsAtLeastTwoCourses(SearchSteps.java:69)
+	at ✽.the search results page should display at least 2 courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/course_navigation_tabs.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1208670252", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1208670252'><pre>java.lang.AssertionError: Less than 2 courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsAtLeastTwoCourses(SearchSteps.java:69)
+	at ✽.the search results page should display at least 2 courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/course_navigation_tabs.feature:10)
+</pre></div></td>
+<td>25</td>
+<td>testRunner.RunnerIO@77f1baf5</td></tr>
+<tr>
+<td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remove course from cart", "Cart Management - Add, Save for Later, and Remove Course"</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1112)
+	at java.base/java.util.Map.of(Map.java:1365)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at stepDefinition.CartSteps.userAddsTheCourseAgain(CartSteps.java:106)
+	at ✽.User adds the course again to the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:28)
+</pre></div><a href='#' onClick='toggleBox("stack-trace879706537", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace879706537'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1112)
+	at java.base/java.util.Map.of(Map.java:1365)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at stepDefinition.CartSteps.userAddsTheCourseAgain(CartSteps.java:106)
+	at ✽.User adds the course again to the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:28)
+</pre></div></td>
+<td>3</td>
+<td>testRunner.RunnerIO@77f1baf5</td></tr>
+<tr>
+<td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save course for later from cart", "Cart Management - Add, Save for Later, and Remove Course"</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1112)
+	at java.base/java.util.Map.of(Map.java:1365)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at stepDefinition.CartSteps.userHasCourseInCart(CartSteps.java:78)
+	at ✽.User has a course in the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:22)
+</pre></div><a href='#' onClick='toggleBox("stack-trace403930795", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace403930795'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1112)
+	at java.base/java.util.Map.of(Map.java:1365)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at stepDefinition.CartSteps.userHasCourseInCart(CartSteps.java:78)
+	at ✽.User has a course in the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:22)
+</pre></div></td>
+<td>3</td>
+<td>testRunner.RunnerIO@77f1baf5</td></tr>
+<tr>
+<td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify cart count persists after navigation and refresh", "Cart Persistence After Back Navigation and Refresh"</td>
+<td><div><pre>java.lang.Error: Unresolved compilation problem: 
+	The method getProperty(String) is undefined for the type Base
+
+	at stepDefinition.CartSteps.userClearsCart(CartSteps.java:70)
+	at ✽.User clears the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/cart_persistence.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace154449199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace154449199'><pre>java.lang.Error: Unresolved compilation problem: 
+	The method getProperty(String) is undefined for the type Base
+
+	at stepDefinition.CartSteps.userClearsCart(CartSteps.java:70)
+	at ✽.User clears the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/cart_persistence.feature:9)
+</pre></div></td>
+<td>7</td>
+<td>testRunner.RunnerIO@77f1baf5</td></tr>
+<tr>
+<td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add all items to cart and ensure no duplicates", "Add All To Cart and Verify No Duplicates"</td>
+<td><div><pre>java.lang.AssertionError: No courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+	at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/add_all_no_duplicates.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1825984232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1825984232'><pre>java.lang.AssertionError: No courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+	at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/add_all_no_duplicates.feature:10)
+</pre></div></td>
+<td>33</td>
+<td>testRunner.RunnerIO@77f1baf5</td></tr>
+<tr>
+<td title='testRunner.RunnerIO.runScenario()'><b>runScenario</b><br>Test class: testRunner.RunnerIO<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search and add course to cart", "Cart Management - Add, Save for Later, and Remove Course"</td>
+<td><div><pre>java.lang.AssertionError: No courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+	at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1329572464", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1329572464'><pre>java.lang.AssertionError: No courses found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+	at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:11)
+</pre></div></td>
+<td>31</td>
+<td>testRunner.RunnerIO@77f1baf5</td></tr>
+>>>>>>> 981bc544bf32fa1a4f4b817f9c296ee4e01f4313
 </table><p>
 </body>
 </html>

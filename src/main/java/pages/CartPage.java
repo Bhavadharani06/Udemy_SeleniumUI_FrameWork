@@ -1,38 +1,84 @@
-
 package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.*;
+
+import utility.AllFunctionality;
+
 import java.time.Duration;
+import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CartPage {
 
-	private WebDriver driver;
-	private WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private AllFunctionality util = new AllFunctionality();
 
-	public CartPage(WebDriver driver) {
-		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-		PageFactory.initElements(driver, this);
-	}
+    public CartPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+        PageFactory.initElements(driver, this);
+    }
 
-	// Using a 'By' locator to ensure we always find a fresh instance of the button
-	private By closePopupLocator = By.xpath("//button[@data-purpose='close-popup']");
+    // ----------- LOCATORS -----------
 
-	public boolean isCourseAdded() {
-		// 1. Wait for the "Added to cart" text to appear (based on image_9f7f25.jpg)
-		WebElement addedToCartText = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(text(),'Added to cart')]")));
+    private By closePopupLocator = By.xpath("//button[@data-purpose='close-popup']");
 
-		boolean status = addedToCartText.isDisplayed();
+    @FindBy(xpath = "//button[contains(.,'Remove')]")
+    public List<WebElement> removeButtons;
 
-		// 2. Wait for the close button to be clickable
-		WebElement closeBtn = wait.until(ExpectedConditions.elementToBeClickable(closePopupLocator));
+    @FindBy(xpath = "//div[contains(@class,'shopping-item_container')]//a[contains(@href,'/course/')]")
+    public List<WebElement> cartItems;
 
-		// 3. Click using JS to bypass any overlay issues
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", closeBtn);
+    @FindBy(xpath = "//span[text()='Save for Later']/parent::button")
+    public WebElement saveForLaterBtn;
 
-		return status;
-	}
+    // ----------- METHODS -----------
+
+    public boolean isCourseAdded() {
+        WebElement addedToCartText = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("//h2[contains(text(),'Added to cart')]")));
+
+        boolean status = addedToCartText.isDisplayed();
+
+        WebElement closeBtn = wait.until(
+                ExpectedConditions.elementToBeClickable(closePopupLocator));
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", closeBtn);
+
+        return status;
+    }
+
+    public void clearCart() throws InterruptedException {
+        for (WebElement btn : removeButtons) {
+            btn.click();
+            Thread.sleep(1000);
+        }
+    }
+
+    public int getCartCount() {
+        return cartItems.size();
+    }
+
+    public int getUniqueItemCount() {
+        Set<String> set = new HashSet<>();
+
+        for (WebElement e : cartItems) {
+            set.add(e.getText().trim());
+        }
+
+        return set.size();
+    }
+
+    public void clickSaveForLater() {
+        util.click(driver, saveForLaterBtn);
+    }
+
+    public boolean isCartEmpty() {
+        return driver.getPageSource().toLowerCase().contains("your cart is empty");
+    }
 }
