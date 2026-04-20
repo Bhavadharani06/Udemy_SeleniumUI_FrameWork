@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -34,12 +35,31 @@
               <value>
                 <![CDATA[org.testng.TestRunner@6d08b4e6]]>
 >>>>>>> 981bc544bf32fa1a4f4b817f9c296ee4e01f4313
+=======
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-20T09:08:21 IST" name="Default suite" finished-at="2026-04-20T09:09:42 IST" duration-ms="80349">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@8297b3a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-04-20T09:08:21 IST" name="Default test" finished-at="2026-04-20T09:09:42 IST" duration-ms="80349">
+      <class name="testRunner.RunnerIO">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerIO@8297b3a]" started-at="2026-04-20T09:08:22 IST" name="setUpClass" finished-at="2026-04-20T09:08:22 IST" duration-ms="459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ecfbe91]]>
+>>>>>>> mylearning
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@710f4dc7]" started-at="2026-04-19T20:59:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-19T21:00:17 IST" duration-ms="42454" status="PASS">
           <params>
@@ -53,10 +73,18 @@
               <value>
                 <![CDATA["Add all items to cart and ensure no duplicates"]]>
 >>>>>>> 981bc544bf32fa1a4f4b817f9c296ee4e01f4313
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@8297b3a]" started-at="2026-04-20T09:08:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T09:09:42 IST" duration-ms="79782" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful signup with valid details"]]>
+>>>>>>> mylearning
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <![CDATA["Udemy Course Flow"]]>
               </value>
@@ -131,6 +159,34 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
 Command: [ebfcccedd862733ea181c1756b254cb0, findElement {value=//strong[.='All filters'], using=xpath}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.101, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\91934\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54218}, goog:processID: 22316, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54218/devtoo..., se:cdpVersion: 147.0.7727.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: ebfcccedd862733ea181c1756b254cb0
+=======
+                <![CDATA["User Signup on Udemy"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='full-name']"}
+  (Session info: chrome=147.0.7727.57)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [19b89c3e349d2b7c1eafddd87002652c, findElement {value=full-name, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\preet\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52233}, goog:processID: 31876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52233/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 19b89c3e349d2b7c1eafddd87002652c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='full-name']"}
+  (Session info: chrome=147.0.7727.57)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [19b89c3e349d2b7c1eafddd87002652c, findElement {value=full-name, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.57, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\preet\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52233}, goog:processID: 31876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52233/devtoo..., se:cdpVersion: 147.0.7727.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 19b89c3e349d2b7c1eafddd87002652c
+>>>>>>> mylearning
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -142,11 +198,16 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(Driver
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
 at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+<<<<<<< HEAD
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+=======
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+>>>>>>> mylearning
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<<<<<<< HEAD
 at jdk.proxy2/jdk.proxy2.$Proxy24.isDisplayed(Unknown Source)
 at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
@@ -423,6 +484,19 @@ at ✽.User adds the course again to the cart(file:///C:/Users/Swaathihaa.T.T/On
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:36:55 IST" name="tearDownClass" finished-at="2026-04-20T07:36:55 IST" duration-ms="3" status="PASS">
 >>>>>>> 981bc544bf32fa1a4f4b817f9c296ee4e01f4313
+=======
+at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+at pages.SignUpPage.enterName(SignUpPage.java:71)
+at stepDefinition.SignUpSteps.user_enters_valid_name_and_email(SignUpSteps.java:26)
+at ✽.User enters valid name "Dharani" and email "dharanivedha26@gmail.com"(file:///C:/Users/preet/Documents/Udemy_SeleniumUI_FrameWork/./src/test/java/freatures/signup.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerIO@8297b3a]" started-at="2026-04-20T09:09:42 IST" name="tearDownClass" finished-at="2026-04-20T09:09:42 IST" duration-ms="6" status="PASS">
+>>>>>>> mylearning
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
