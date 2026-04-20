@@ -3,9 +3,15 @@ package testRunner;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
+package testRunner;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
 @CucumberOptions(
-    features = {"src/test/java/featureFiles/searchmanagement.feature"},
+    features = {"src/test/java/features"},
     glue = "stepDefinition",
+    plugin = {"pretty"},
     dryRun = false
 )
 public class RunnerIO extends AbstractTestNGCucumberTests {

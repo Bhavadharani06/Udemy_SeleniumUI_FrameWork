@@ -6,8 +6,23 @@
       <class name="testRunner.RunnerIO">
         <methods>
           <include name="setUpClass"/>
+<<<<<<< HEAD
           <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="0 1 2 3 4"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="3 4"/>
+=======
+          <include name="runScenario" invocation-numbers="0 1 2 3 4 5 6"/>
+          <include name="tearDownClass"/>
+>>>>>>> 981bc544bf32fa1a4f4b817f9c296ee4e01f4313
+=======
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+>>>>>>> mylearning
+>>>>>>> a5738de01ff81a0a32affa6081183043405ab42f
         </methods>
       </class> <!-- testRunner.RunnerIO -->
     </classes>
