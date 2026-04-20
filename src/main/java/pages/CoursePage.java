@@ -1,34 +1,72 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utility.AllFunctionality;
 
-public class CoursePage extends BasePage {
+public class CoursePage {
+
+    WebDriver driver;
+    AllFunctionality util = new AllFunctionality();
 
     public CoursePage(WebDriver driver) {
-        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    By addToCart = By.xpath("//button[contains(.,'Add to cart') or contains(.,'Buy')]");
+    @FindBy(xpath = "//button[contains(.,'Add to cart') or contains(.,'Add all to cart')]")
+    WebElement addToCartBtn;
 
-    By instructor = By.xpath("//a[contains(normalize-space(),'Angela Yu')]");
+    @FindBy(xpath = "//button[contains(.,'Add all to cart')]")
+    WebElement addAllToCartBtn;
 
-    public void clickAddToCart() {
+    @FindBy(xpath = "//button[contains(.,'Go to cart')]")
+    WebElement goToCartBtn;
 
-        WebElement btn = wait.until(
-                ExpectedConditions.elementToBeClickable(addToCart));
+    @FindBy(tagName = "h1")
+    WebElement courseTitle;
 
-        btn.click();
+    @FindBy(xpath = "//a[contains(@href,'/user/') or contains(@href,'/instructor/') or contains(@href,'#instructor')]")
+    WebElement instructor;
+
+    public void clickAddToCart() throws InterruptedException {
+        util.scrollIntoView(driver, addToCartBtn);
+        Thread.sleep(1000);
+
+        try {
+            addToCartBtn.click();
+        } catch (Exception e) {
+            util.clickJS(driver, addToCartBtn);
+        }
+    }
+
+    public void clickAddAllToCart() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(2000);
+
+        util.scrollIntoView(driver, addAllToCartBtn);
+        Thread.sleep(1000);
+
+        util.clickJS(driver, addAllToCartBtn);
+    }
+
+    public void clickGoToCart() {
+        goToCartBtn.click();
+    }
+
+    public String getCourseTitle() {
+        return courseTitle.getText();
+    }
+
+    public String getInstructorName() {
+        return instructor.getText();
     }
 
     public void clickInstructor() {
-
-        WebElement ins = wait.until(
-                ExpectedConditions.presenceOfElementLocated(instructor));
-
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", ins);
-        js.executeScript("arguments[0].click();", ins);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", instructor);
     }
 }

@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -73,12 +74,12 @@ public class AllFunctionality {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
 	}
 
-	public WebElement waitClickable(WebDriver driver, WebElement element, int sec) {
+	public static WebElement waitClickable(WebDriver driver, By locator, int sec) {
 		return new WebDriverWait(driver, Duration.ofSeconds(sec))
-				.until(ExpectedConditions.elementToBeClickable(element));
+				.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
-	public WebElement waitVisible(WebDriver driver, WebElement element, int sec) {
+	public static WebElement waitVisible(WebDriver driver, WebElement element, int sec) {
 		return new WebDriverWait(driver, Duration.ofSeconds(sec)).until(ExpectedConditions.visibilityOf(element));
 	}
 
@@ -206,6 +207,16 @@ public class AllFunctionality {
 
 		return value;
 	}
+	
+	// JAVASCRIPT EXECUTOR
+
+	public void scrollIntoView(WebDriver driver, WebElement element) {
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public void clickJS(WebDriver driver, WebElement element) {
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+	}
 
 	// JAVA UTIL
 	public int random(int range) {
@@ -290,6 +301,28 @@ public class AllFunctionality {
 			}
 			return data;
 		}
+	}
+	
+	public void waitForCaptchaIfPresent(WebDriver driver) {
+
+	    try {
+	        // Wait up to 60 seconds for page to stabilize
+	        new WebDriverWait(driver, Duration.ofSeconds(60))
+	            .until(d -> {
+	                String url = d.getCurrentUrl();
+	                return !url.contains("captcha") && !url.contains("verify");
+	            });
+
+	        System.out.println("✅ No CAPTCHA or handled");
+
+	    } catch (Exception e) {
+	        System.out.println("⚠ CAPTCHA detected → solve manually");
+	        try {
+	            Thread.sleep(40000); // manual solve time
+	        } catch (InterruptedException ex) {
+	            ex.printStackTrace();
+	        }
+	    }
 	}
 
 }
