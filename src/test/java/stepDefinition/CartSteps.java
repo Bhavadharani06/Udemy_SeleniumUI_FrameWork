@@ -67,7 +67,7 @@ public class CartSteps extends Base {
 
     @When("User clears the cart")
     public void userClearsCart() throws Exception {
-    		driver.get(Base.getProperty("cartUrl"));
+    		driver.get(Hooks.prop.getProperty("cartUrl"));
     		Thread.sleep(3000);
         cartPage = new CartPage(driver);
         cartPage.clearCart();

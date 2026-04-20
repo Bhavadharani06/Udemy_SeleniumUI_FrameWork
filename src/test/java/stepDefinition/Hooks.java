@@ -2,18 +2,21 @@ package stepDefinition;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
-import utility.Base;
 
 import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class Hooks extends Base {
+import utility.Pages;
 
+public class Hooks {
+
+    public static WebDriver driver;
     public static Properties prop;
 
     // Load config
@@ -38,8 +41,6 @@ public class Hooks extends Base {
 
         loadConfig();
 
-        String browser = prop.getProperty("browser", "chrome");
-
         ChromeOptions options = new ChromeOptions();
 
         options.setExperimentalOption("excludeSwitches",
@@ -49,16 +50,15 @@ public class Hooks extends Base {
         options.addArguments("--disable-notifications");
         options.addArguments("--start-maximized");
 
-        if (browser.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver(options);
-        } else {
-            driver = new ChromeDriver(options);
-        }
+        driver = new ChromeDriver(options);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // Launch URL
         driver.get(prop.getProperty("url"));
+
+        // 🔥 VERY IMPORTANT (your framework depends on this)
+        Pages.initPages(driver);
 
         System.out.println("✔ Browser launched");
     }
