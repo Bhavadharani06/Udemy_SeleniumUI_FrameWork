@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-/featureFiles/
-/testdata/
+/features/
 /stepDefinition/
-=======
-/stepDefinition/
-/freatures/
->>>>>>> mylearning
 /testRunner/

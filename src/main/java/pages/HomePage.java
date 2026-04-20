@@ -1,35 +1,25 @@
 package pages;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.*;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
-
-public class HomePage {
-
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
-    @FindBy(name = "q")
-    private WebElement searchBox;
+    By searchBox = By.name("q");
 
-    public void searchCourse(String course) throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(searchBox)).click();
+    public void searchCourse(String courseName) {
 
-        searchBox.clear();
-        searchBox.sendKeys(course, Keys.ENTER);
+        WebElement box = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(searchBox));
 
-        Thread.sleep(5000); // (can improve later)
-    }
-
-    public String getSearchText() {
-        return searchBox.getAttribute("value");
+        box.clear();
+        box.sendKeys(courseName, Keys.ENTER);
     }
 }
