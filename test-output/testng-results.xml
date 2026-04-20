@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="0" failed="7" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-20T07:34:39 IST" name="Default suite" finished-at="2026-04-20T07:36:55 IST" duration-ms="135544">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-04-20T07:34:39 IST" name="Default test" finished-at="2026-04-20T07:36:55 IST" duration-ms="135544">
+      <class name="testRunner.RunnerIO">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:34:39 IST" name="setUpClass" finished-at="2026-04-20T07:34:40 IST" duration-ms="570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d08b4e6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:34:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T07:35:13 IST" duration-ms="33533" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add all items to cart and ensure no duplicates"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Add All To Cart and Verify No Duplicates"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[No courses found expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: No courses found expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/add_all_no_duplicates.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:35:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T07:35:20 IST" duration-ms="7221" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify cart count persists after navigation and refresh"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Cart Persistence After Back Navigation and Refresh"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+The method getProperty(String) is undefined for the type Base
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+The method getProperty(String) is undefined for the type Base
+
+at stepDefinition.CartSteps.userClearsCart(CartSteps.java:70)
+at ✽.User clears the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/cart_persistence.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:35:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T07:35:46 IST" duration-ms="25379" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open two courses and verify unique URLs"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Course navigation and URL comparison across tabs"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Less than 2 courses found expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Less than 2 courses found expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at stepDefinition.SearchSteps.searchResultsAtLeastTwoCourses(SearchSteps.java:69)
+at ✽.the search results page should display at least 2 courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/course_navigation_tabs.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:35:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T07:36:17 IST" duration-ms="30982" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate to instructor profile and validate back navigation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Back navigation retains search results"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[No courses found expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: No courses found expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/navigation_instructor_back.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:36:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T07:36:48 IST" duration-ms="31189" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search and add course to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Cart Management - Add, Save for Later, and Remove Course"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[No courses found expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: No courses found expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at stepDefinition.SearchSteps.searchResultsShouldDisplayCourses(SearchSteps.java:59)
+at ✽.the search results page should display relevant courses(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:36:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T07:36:51 IST" duration-ms="3185" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Save course for later from cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Cart Management - Add, Save for Later, and Remove Course"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:1112)
+at java.base/java.util.Map.of(Map.java:1365)
+at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+at stepDefinition.CartSteps.userHasCourseInCart(CartSteps.java:78)
+at ✽.User has a course in the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:22)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:36:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T07:36:55 IST" duration-ms="3394" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove course from cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Cart Management - Add, Save for Later, and Remove Course"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:1112)
+at java.base/java.util.Map.of(Map.java:1365)
+at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+at stepDefinition.CartSteps.userAddsTheCourseAgain(CartSteps.java:106)
+at ✽.User adds the course again to the cart(file:///C:/Users/Swaathihaa.T.T/OneDrive/Documents/Udemy_SeleniumUI_FrameWork/src/test/java/featureFiles/search_cart_flow.feature:28)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.RunnerIO@77f1baf5]" started-at="2026-04-20T07:36:55 IST" name="tearDownClass" finished-at="2026-04-20T07:36:55 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.RunnerIO -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
