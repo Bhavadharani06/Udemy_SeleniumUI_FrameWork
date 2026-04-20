@@ -95,7 +95,7 @@ public class ArchivePage {
 		clickUnarchive();
 	}
 
-	// 🔥 MAIN FLOW
+	// MAIN FLOW
 	public void handleArchiveFlow() {
 
 		clickArchivedTab();

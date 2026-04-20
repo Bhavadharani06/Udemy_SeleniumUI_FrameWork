@@ -14,11 +14,11 @@ public class Pages {
 
     // User feature pages
     public static SignUpPage signUpPage;
-    public static MyLearningPage myLearningPage;
     public static MyListPage myListPage;
     public static WishlistPage wishlistPage;
     public static ArchivePage archivePage;
     public static LearningToolsPage learningToolsPage;
+    public static AllCoursesPage allCoursesPage;
 
     public static void initPages(WebDriver driver) {
 
@@ -29,10 +29,10 @@ public class Pages {
 
         // User pages
         signUpPage = PageFactory.initElements(driver, SignUpPage.class);
-        myLearningPage = PageFactory.initElements(driver, MyLearningPage.class);
         myListPage = PageFactory.initElements(driver, MyListPage.class);
         wishlistPage = PageFactory.initElements(driver, WishlistPage.class);
         archivePage = PageFactory.initElements(driver, ArchivePage.class);
         learningToolsPage = PageFactory.initElements(driver, LearningToolsPage.class);
+        allCoursesPage = PageFactory.initElements(driver, AllCoursesPage.class);
     }
 }

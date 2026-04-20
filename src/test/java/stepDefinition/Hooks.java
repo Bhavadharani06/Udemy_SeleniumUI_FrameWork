@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import utility.Base;
 import utility.Pages;
 
 public class Hooks {
@@ -43,26 +44,25 @@ public class Hooks {
 
         ChromeOptions options = new ChromeOptions();
 
-        options.setExperimentalOption("excludeSwitches",
-                Collections.singletonList("enable-automation"));
+        options.addArguments("user-data-dir=C:\\Users\\Swaathihaa.T.T\\AppData\\Local\\Google\\Chrome\\User Data - Copy");
+        options.addArguments("profile-directory=Default");
 
         options.addArguments("--disable-blink-features=AutomationControlled");
-        options.addArguments("--disable-notifications");
         options.addArguments("--start-maximized");
 
         driver = new ChromeDriver(options);
 
+        
+        Base.driver = driver;
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        // Launch URL
         driver.get(prop.getProperty("url"));
 
-        // 🔥 VERY IMPORTANT (your framework depends on this)
         Pages.initPages(driver);
 
-        System.out.println("✔ Browser launched");
+        System.out.println("Browser launched");
     }
-
     @After
     public void tearDown() {
 
@@ -70,6 +70,6 @@ public class Hooks {
             driver.quit();
         }
 
-        System.out.println("✔ Browser closed");
+        System.out.println("Browser closed");
     }
 }

@@ -79,8 +79,8 @@ public class AllFunctionality {
 				.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
-	public static WebElement waitVisible(WebDriver driver, WebElement element, int sec) {
-		return new WebDriverWait(driver, Duration.ofSeconds(sec)).until(ExpectedConditions.visibilityOf(element));
+	public static WebElement waitVisible(WebDriver driver, By locator, int sec) {
+		return new WebDriverWait(driver, Duration.ofSeconds(sec)).until(ExpectedConditions.visibilityOf((WebElement) locator));
 	}
 
 	public WebElement waitPresence(WebDriver driver, By locator, int sec) {

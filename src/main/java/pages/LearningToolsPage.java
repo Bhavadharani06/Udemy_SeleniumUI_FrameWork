@@ -41,16 +41,14 @@ public class LearningToolsPage {
     }
 
     public void enterTime(String time) {
-        WebElement timeField = AllFunctionality.waitVisible(driver,
-                (WebElement) By.xpath("//input[@type='time']"), 20);
+        WebElement timeField = AllFunctionality.waitVisible(driver, By.xpath("//input[@type='time']"), 20);
 
         timeField.clear();
         timeField.sendKeys(time);
     }
 
     public void enterDate(String date) {
-        WebElement dateField = AllFunctionality.waitVisible(driver,
-                (WebElement) By.xpath("//input[@placeholder='MM/DD/YYYY']"), 20);
+        WebElement dateField = AllFunctionality.waitVisible(driver, By.xpath("//input[@placeholder='MM/DD/YYYY']"), 20);
 
         dateField.clear();
         dateField.sendKeys(date);
