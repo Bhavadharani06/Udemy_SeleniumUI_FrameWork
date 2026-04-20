@@ -22,8 +22,8 @@ public class Pages {
         homePage = PageFactory.initElements(driver, HomePage.class);
         searchResultsPage = PageFactory.initElements(driver, SearchResultsPage.class);
         cartPage = PageFactory.initElements(driver, CartPage.class);
-        page1=PageFactory.initElements(driver, page1.class);
-        common=PageFactory.initElements(driver, common.class);
+        page1=PageFactory.initElements(driver, Explore1Page.class);
+        common=PageFactory.initElements(driver, CommonstepsPage.class);
 }
 
 	

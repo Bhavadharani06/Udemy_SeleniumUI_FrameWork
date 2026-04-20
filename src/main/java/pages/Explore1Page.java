@@ -19,6 +19,7 @@ public class Explore1Page {
     WebDriverWait wait;
     JavascriptExecutor js;
     Actions actions;
+    public static Explore1Page page1;
 
     public Explore1Page(WebDriver driver) {
     	 this.driver = driver;
@@ -27,6 +28,9 @@ public class Explore1Page {
          actions = new Actions(driver);
          wait = new WebDriverWait(driver, Duration.ofSeconds(20));
      }
+    public static void initPages(WebDriver driver) {
+        page1 = new Explore1Page(driver);
+    }
 
      // Explore Menu
      @FindBy(css = "[aria-label='Explore']")
@@ -279,6 +283,16 @@ public class Explore1Page {
          }
 
          return url;
+     }
+     public String getFirstCourseTitle() {
+
+         List<WebElement> courseList = wait.until(
+             ExpectedConditions.presenceOfAllElementsLocatedBy(
+                 By.xpath("//a[contains(@href,'/course/')]")
+             )
+         );
+
+         return courseList.get(0).getText().split("\n")[0];
      }
 
 }
