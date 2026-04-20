@@ -73,12 +73,12 @@ public class AllFunctionality {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
 	}
 
-	public WebElement waitClickable(WebDriver driver, WebElement element, int sec) {
+	public static WebElement waitClickable(WebDriver driver, By locator, int sec) {
 		return new WebDriverWait(driver, Duration.ofSeconds(sec))
-				.until(ExpectedConditions.elementToBeClickable(element));
+				.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
-	public WebElement waitVisible(WebDriver driver, WebElement element, int sec) {
+	public static WebElement waitVisible(WebDriver driver, WebElement element, int sec) {
 		return new WebDriverWait(driver, Duration.ofSeconds(sec)).until(ExpectedConditions.visibilityOf(element));
 	}
 
@@ -290,6 +290,28 @@ public class AllFunctionality {
 			}
 			return data;
 		}
+	}
+	
+	public void waitForCaptchaIfPresent(WebDriver driver) {
+
+	    try {
+	        // Wait up to 60 seconds for page to stabilize
+	        new WebDriverWait(driver, Duration.ofSeconds(60))
+	            .until(d -> {
+	                String url = d.getCurrentUrl();
+	                return !url.contains("captcha") && !url.contains("verify");
+	            });
+
+	        System.out.println("✅ No CAPTCHA or handled");
+
+	    } catch (Exception e) {
+	        System.out.println("⚠ CAPTCHA detected → solve manually");
+	        try {
+	            Thread.sleep(40000); // manual solve time
+	        } catch (InterruptedException ex) {
+	            ex.printStackTrace();
+	        }
+	    }
 	}
 
 }

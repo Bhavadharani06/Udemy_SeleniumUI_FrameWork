@@ -2,7 +2,7 @@ Feature: My Learning - All Courses
 
 Background:
   Given User is logged in
-  And User is on My Learning page
+  And User is on my Learning page
   
 Scenario: Play course when courses are available
   When Courses are available

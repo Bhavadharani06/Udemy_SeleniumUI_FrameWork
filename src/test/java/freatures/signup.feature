@@ -1,9 +1,16 @@
-Feature: User Signup
+Feature: User Signup on Udemy
 
-Scenario: User signs up with valid details
-  Given User opens Udemy
-  When User enters valid name and email
-  And User clicks on Sign Up
-  Then Verification code should be sent to registered email
-  When User enters the verification code and completes the signup process
-  Then User should be redirected to homepage
+  Scenario: Successful signup with valid details
+
+    Given launch the new browser
+    And navigate to udemy using url "https://www.udemy.com/"
+    
+    When User clicks on Sign Up
+    And User enters valid name "Dharani" and email "dharanivedha26@gmail.com"
+    And User clicks Continue
+    
+    Then Verification code should be sent to registered email
+    
+    When User enters OTP manually and completes signup
+    
+    Then User should be redirected to homepage

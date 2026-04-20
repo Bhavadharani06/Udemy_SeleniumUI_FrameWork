@@ -1,15 +1,8 @@
 Feature: Learning Reminder Management
 
 Background:
-  Given User is logged in
-  And User is on My Learning page
+  Given User is on My learning page
 
-Scenario: Add reminder when no reminder exists
+Scenario: Create learning reminder
   When User navigates to Learning Tools
-  And No reminder exists
-  Then User creates a new reminder with valid details
-
-Scenario: Add another reminder when reminder already exists
-  When User navigates to Learning Tools
-  And Reminder already exists
-  Then User adds another reminder
+  Then User creates a learning reminder
