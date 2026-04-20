@@ -1,0 +1,9 @@
+<suite name="UdemySuite" parallel="tests" thread-count="2">
+
+    <test name="SearchTests">
+        <classes>
+            <class name="testRunner.RunnerIO"/>
+        </classes>
+    </test>
+
+</suite>
