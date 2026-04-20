@@ -1,33 +1,51 @@
+
+
+
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class InstructorPage extends BasePage {
+public class InstructorPage {
+
+    WebDriver driver;
 
     public InstructorPage(WebDriver driver) {
-        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    By linkedin = By.xpath("//a[contains(@href,'linkedin.com')]");
-    By youtube = By.xpath("//a[contains(@href,'youtube.com')]");
+    @FindBy(tagName = "h1")
+    public WebElement instructorHeader;
 
-    public void clickLinkedIn() {
-        clickSocialLink(linkedin);
+    // ✅ Check if new page opened
+    public boolean isProfileUrl() {
+        return driver.getCurrentUrl().contains("user");
     }
 
-    public void clickYouTube() {
-        clickSocialLink(youtube);
+    // ✅ Validate instructor name (URL case)
+    public boolean isInstructorMatching(String expectedName) {
+        return instructorHeader.getText().toLowerCase()
+                .contains(expectedName.split(" ")[0].toLowerCase());
+    }
+   
+    public String getInstructorHeader() {
+        return instructorHeader.getText();
     }
 
-    private void clickSocialLink(By locator) {
+   
+    public boolean isInstructorVisibleOnCourse(String name) {
 
-        WebElement element = wait.until(
-                ExpectedConditions.presenceOfElementLocated(locator));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
 
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
-        js.executeScript("arguments[0].click();", element);
+        String firstName = name.split(" ")[0];
+
+        java.util.List<WebElement> list = driver.findElements(
+                By.xpath("//a[contains(text(),'" + firstName + "')]")
+        );
+
+        return !list.isEmpty();
     }
 }
