@@ -41,8 +41,7 @@ public class WishlistPage {
     // ================= SEARCH & FILTER =================
 
     public void searchCourse(String courseName) {
-        WebElement search = AllFunctionality.waitVisible(driver,
-                (WebElement) By.xpath("//input[@placeholder='Search for anything']"), 20);
+        WebElement search = AllFunctionality.waitVisible(driver, By.xpath("//input[@placeholder='Search for anything']"), 20);
 
         search.sendKeys(courseName);
         search.submit();
@@ -57,10 +56,9 @@ public class WishlistPage {
 
     public void addCourseToWishlist(String courseName) {
 
-        WebElement course = AllFunctionality.waitVisible(driver,
-                (WebElement) By.xpath("//h3[contains(.,'" + courseName + "')]"), 20);
+        WebElement course = AllFunctionality.waitVisible(driver, By.xpath("//h3[contains(.,'" + courseName + "')]"), 20);
 
-        // Hover on course
+        // Hover on course 
         Actions act = new Actions(driver);
         act.moveToElement(course).perform();
 

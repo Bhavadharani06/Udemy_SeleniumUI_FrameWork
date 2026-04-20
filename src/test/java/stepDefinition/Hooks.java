@@ -1,49 +1,75 @@
 package stepDefinition;
 
-import java.io.IOException;
+import io.cucumber.java.Before;
+import io.cucumber.java.After;
+
+import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Collections;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import utility.*;
+import utility.Base;
+import utility.Pages;
 
-public class Hooks extends AllFunctionality {
+public class Hooks {
 
-	@Before
-	public void setUp() throws IOException {
+    public static WebDriver driver;
+    public static Properties prop;
 
-	    String URL = getPropertyKeyValue("url");
+    // Load config
+    public void loadConfig() {
 
-	    ChromeOptions options = new ChromeOptions();
-	    options.addArguments("--disable-blink-features=AutomationControlled");
+        prop = new Properties();
 
-	    Base.driver = new ChromeDriver(options);
+        try {
+            String path = System.getProperty("user.dir")
+                    + "/src/main/resources/CommonData/config.properties";
 
-	    maximize(Base.driver);
-	    implicitWait(Base.driver, 30);
+            FileInputStream fis = new FileInputStream(path);
+            prop.load(fis);
 
-	    Base.driver.get(URL);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-	    waitForCaptchaIfPresent(Base.driver);
+    @Before
+    public void setup() {
 
-	    Pages.loadAllPages(Base.driver);
+        loadConfig();
 
-	    System.out.println("✅ Browser launched");
-	}
+        ChromeOptions options = new ChromeOptions();
 
-	@After
-	public void tearDown() {
+        options.addArguments("user-data-dir=C:\\Users\\Swaathihaa.T.T\\AppData\\Local\\Google\\Chrome\\User Data - Copy");
+        options.addArguments("profile-directory=Default");
 
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.addArguments("--start-maximized");
 
-		System.out.println("❌ Browser closed");
-	}
-	
+        driver = new ChromeDriver(options);
+
+        
+        Base.driver = driver;
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.get(prop.getProperty("url"));
+
+        Pages.initPages(driver);
+
+        System.out.println("Browser launched");
+    }
+    @After
+    public void tearDown() {
+
+        if (driver != null) {
+            driver.quit();
+        }
+
+        System.out.println("Browser closed");
+    }
 }
