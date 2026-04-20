@@ -21,12 +21,14 @@ public class HomePage {
     private WebElement searchBox;
 
     public void searchCourse(String course) throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(searchBox)).click();
+       Thread.sleep(2000);
+    	wait.until(ExpectedConditions.visibilityOf(searchBox)).click();
+        
 
         searchBox.clear();
         searchBox.sendKeys(course, Keys.ENTER);
 
-        Thread.sleep(5000); // (can improve later)
+        Thread.sleep(9000); // (can improve later)
     }
 
     public String getSearchText() {

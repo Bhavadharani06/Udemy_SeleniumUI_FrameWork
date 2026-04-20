@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-    features = {"src/test/java/featureFiles"},
+    features = {"src/test/java/featureFiles/searchmanagement.feature"},
     glue = "stepDefinition",
     dryRun = false
 )

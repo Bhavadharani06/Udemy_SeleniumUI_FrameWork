@@ -31,6 +31,7 @@ public class SearchManagementSteps {
 		  
 		// ✅ USE Pages
 		home = Pages.homePage;
+		System.out.println("User is on the homepage");
 	}
 
 	@When("user searches for {string}")
@@ -41,11 +42,13 @@ public class SearchManagementSteps {
 
 		// ✅ USE Pages
 		results = Pages.searchResultsPage;
+		System.out.println("A course is searched");
 	}
 
 	@And("user applies certification, rating and language filters")
 	public void apply_multiple_filters() throws InterruptedException {
 		results.applyMainFilters();
+		System.out.println("All the main filters added");
 	}
 
 	@And("user applies free course filter")
@@ -57,6 +60,7 @@ public class SearchManagementSteps {
 	public void clear_filters() throws InterruptedException {
 		results.clearAllFilters();
 		Thread.sleep(2000);
+		System.out.println("Only free courses selected");
 	}
 
 	@And("user clicks on Add to Cart")
@@ -67,6 +71,7 @@ public class SearchManagementSteps {
 
 		// ✅ USE Pages
 		cart = Pages.cartPage;
+		System.out.println("User clicked on add to cart");
 	}
 
 	@Then("enroll now button should be visible")
