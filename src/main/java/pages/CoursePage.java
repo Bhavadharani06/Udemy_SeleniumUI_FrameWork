@@ -16,19 +16,19 @@ public class CoursePage {
     }
 
     @FindBy(xpath = "//button[contains(.,'Add to cart') or contains(.,'Add all to cart')]")
-    WebElement addToCartBtn;
+   public WebElement addToCartBtn;
 
     @FindBy(xpath = "//button[contains(.,'Add all to cart')]")
-    WebElement addAllToCartBtn;
+  public  WebElement addAllToCartBtn;
 
     @FindBy(xpath = "//button[contains(.,'Go to cart')]")
-    WebElement goToCartBtn;
+    public WebElement goToCartBtn;
 
     @FindBy(tagName = "h1")
-    WebElement courseTitle;
+    public WebElement courseTitle;
 
     @FindBy(xpath = "//a[contains(@href,'/user/') or contains(@href,'/instructor/') or contains(@href,'#instructor')]")
-    WebElement instructor;
+    public  WebElement instructor;
 
     public void clickAddToCart() throws InterruptedException {
         util.scrollIntoView(driver, addToCartBtn);

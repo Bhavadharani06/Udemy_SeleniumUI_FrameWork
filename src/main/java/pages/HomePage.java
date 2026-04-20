@@ -1,34 +1,35 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.*;
+import org.openqa.selenium.support.ui.*;
 
-public class HomePage extends BasePage {
+import java.time.Duration;
+
+public class HomePage {
+
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     public HomePage(WebDriver driver) {
-        super(driver);
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        PageFactory.initElements(driver, this);
     }
 
-    By searchBox = By.name("q");
+    @FindBy(name = "q")
+    private WebElement searchBox;
 
-    public void searchCourse(String courseName) {
+    public void searchCourse(String course) throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(searchBox)).click();
 
-        WebElement box = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(searchBox));
+        searchBox.clear();
+        searchBox.sendKeys(course, Keys.ENTER);
 
-        box.clear();
-        box.sendKeys(courseName);
+        Thread.sleep(5000); // (can improve later)
+    }
 
-        // small human-like delay (helps with Cloudflare)
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        box.sendKeys(Keys.ENTER);
+    public String getSearchText() {
+        return searchBox.getAttribute("value");
     }
 }
